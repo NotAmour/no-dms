@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>No DMs – Use Channels</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --subtext: #444;
+      --border: #ddd;
+      --link: #0070f3;
+      --accent: #4ade80;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1117;
+        --text: #eaeaea;
+        --subtext: #aaa;
+        --border: #333;
+        --link: #60a5fa;
+        --accent: #34d399;
+      }
+    }
+
+    body {
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 2rem 1rem;
+      max-width: 720px;
+      margin-inline: auto;
+      line-height: 1.7;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+
+    h2 {
+      margin-top: 2rem;
+      color: var(--text);
+    }
+
+    p, ul {
+      margin: 1rem 0;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    blockquote {
+      border-left: 4px solid var(--border);
+      padding-left: 1em;
+      color: var(--subtext);
+      margin: 2em 0;
+      font-style: italic;
+    }
+
+    .button {
+      background: var(--accent);
+      color: #000;
+      padding: 0.7em 1.4em;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 2rem;
+      transition: background 0.2s;
+    }
+
+    .button:hover {
+      background: #22c55e;
+    }
+
+    .message {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: var(--subtext);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: var(--subtext);
+    }
+  </style>
+</head>
+<body>
+  <h1>No DMs, Please 🙅‍♂️</h1>
+
+  <p><strong>Private messages at work slow us down.</strong> Here's why we ask everyone to use public channels instead.</p>
+
+  <h2>🚪 1. Public Channels Create Shared Context</h2>
+  <p>Public conversations let others see what’s happening, reducing repeated questions and improving visibility for the team.</p>
+
+  <h2>🔍 2. Your Question Might Help Others</h2>
+  <p>Most questions aren’t unique. Asking publicly helps more than just you—it builds searchable team knowledge.</p>
+
+  <h2>🧠 3. Don’t Rely on One Brain</h2>
+  <p>In a DM, only one person can help. In a channel, everyone can. It’s faster and more robust.</p>
+
+  <h2>🕵️‍♀️ 4. DMs Are Opaque</h2>
+  <p>There’s no history others can follow. Public channels let people learn from past discussions and decisions.</p>
+
+  <h2>🛠️ 5. It Makes Onboarding Easier</h2>
+  <p>New hires can scroll through channels and learn by observation. In DMs, that context is lost.</p>
+
+  <h2>💬 When Are DMs Okay?</h2>
+  <ul>
+    <li>Personal or sensitive topics</li>
+    <li>Quick logistics ("ready for the call?")</li>
+    <li>1:1 feedback or private notes</li>
+  </ul>
+
+  <blockquote>“Default to public. Ask in channels. Collaborate out loud.”</blockquote>
+
+  <button class="button" onclick="copyLink()">📤 Share This</button>
+  <div id="message" class="message"></div>
+
+  <footer>
+    ✨ Built for better communication | <a href="https://no-dms.org">no-dms.org</a>
+  </footer>
+
+  <script>
+    function copyLink() {
+      navigator.clipboard.writeText("https://no-dms.org")
+        .then(() => {
+          document.getElementById('message').textContent = "Link copied to clipboard! 📎";
+        })
+        .catch(() => {
+          document.getElementById('message').textContent = "Oops! Failed to copy.";
+        });
+    }
+  </script>
+</body>
+</html>
